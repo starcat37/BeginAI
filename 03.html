@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset='utf-8'>
+  <title>Further</title>
   <link rel="stylesheet" href="./docs/CSS/beginAI.css">
   <script src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
@@ -34,15 +35,15 @@
         <h2>07-1. 텐서플로 플레이그라운드 시작하기</h2>
         주황색(음수, -1)과 파란색(양수, +1) 데이터를 구별할 수 있도록 학습시키는 분류 문제를 알아보자<br>
         <img src=".\docs\pictures\03\3_html_1.png" width=500 border="1" hspace="10">
-        <ul> 
+        <ul>
         <li>에포크 (Epoch) : 전체 데이터를 사용하여 인공 신경망이 학습한 횟수 </li>
         <li>검증 데이터와 훈련 데이터의 비율 (Ratio of training to test data) : 훈련 데이터와 검증 데이터를 나누는 비율</li>
         <li>노이즈 (Noise) : Noise가 높아질수록 데이터가 섞여 있는 정도가 심해짐</li>
         <li>배치 사이즈 (Batch Size) : 신경망을 학습시킬 때 한 번에 학습하는 데이터의 양<br>
-        데이터의 입력 형태 중 각각의 요소 값을 수정한 후 재생성 (regenerate) 버튼을 클릭하여 실행함</li> 
+        데이터의 입력 형태 중 각각의 요소 값을 수정한 후 재생성 (regenerate) 버튼을 클릭하여 실행함</li>
         </ul>
       </div>
-      
+
       <div  class="subsections">
         <h2>07-2. 출력 부분 살펴보기</h2>
         파란색 점과 주황색 점이 있는 곳이 2개의 영역으로 잘 구분되며, 오차 또한 0으로 가까워짐<br>
@@ -59,10 +60,10 @@
           <ul>
             <li>신경망 층의 개수 조절하기 : Hidden layers의 더하기, 빼기 버튼을 누름 </li>
             <li>뉴런의 수 조정하기 : 각 층에서 더하기, 빼기 버튼을 누름 </li>
-            <img src=".\docs\pictures\03\3_html_2.png" width=500 border="1" hspace="10"><br><br> 
+            <img src=".\docs\pictures\03\3_html_2.png" width=500 border="1" hspace="10"><br><br>
           </ul>
-      </div>  
-      
+      </div>
+
       <div class="subsections">
         <h2>07-4. 텐서플로 플레이그라운드의 상단화면 용어 정리하기</h2>
         <ul>
@@ -75,7 +76,7 @@
         </ul>
 
       </div>
-      
+
     </section>
 
     <section id="tab-2" class="tab-content">
@@ -88,10 +89,10 @@
       <div class="subsections">
         <h2>08-2. 합성곱신경망 (CNN)</h2>
         시각 세포의 작동 원리를 본떠 실제 이미지 인식 인공지능을 딥러닝 기법으로 만듦
-        <ul style="margin:10px;"> 
-          
-          <li>합성곱 연산 : 추출한 부분 데이터를 필터와 곱할 때 합성곱 연산이 사용됨<br></li> 
-        
+        <ul style="margin:10px;">
+
+          <li>합성곱 연산 : 추출한 부분 데이터를 필터와 곱할 때 합성곱 연산이 사용됨<br></li>
+
         </ul>
         <div >
           예1) 숫자 인식 인공지능 : 이미지를 특정한 영역별로 추출하여 학습시킴 <br>
@@ -101,7 +102,7 @@
       <div class="subsections">
         <h2>08-3. 순환신경망 (RNN)</h2>
         딥러닝의 알고리즘 중 연속된 값을 예측할 수 있음 (재귀 신경망)<br>
-        <ul sytle="margin:10px;"> 
+        <ul sytle="margin:10px;">
           <li>재귀 : 가중치의 변화가 한 방향으로 이동하는 것이 아니라, 다시 자기 자신에게 돌아오는 형태를 지님</li>
         </ul>
         <div>
@@ -111,21 +112,21 @@
           <img src=".\docs\pictures\03\3_html_3.png" width=500 border="1" hspace="10"><br><br>
         </div>
       </div>
-        
+
       <div class="subsections">
         <h2>08-4. 생성신경망 </h2>
          판별과 예측을 목적으로 하는 신경망과 달리, 무엇인가를 만들기 위한 신경망<br>
-        <ul style="margin:10px;"> 
+        <ul style="margin:10px;">
           <li>생성 인공지능 : 조건에 맞는 그림을 그려줌 <br></li>
         </ul>
         <div>
          예1) 딥페이크 : 생성 모델링을 통해 기존에 있던 영상이나 사진에 새로운 사람의 얼굴이나 특정 부위를 합성함<br>
          예2) 딥아트 : 특정 화가의 화풍을 학습한 인공지능으로 화풍과 비슷하게 사진을 변경함 <br><br>
-         <img src=".\docs\pictures\03\3_html_4.png" width=500 border="1" hspace="10"><br><br> 
+         <img src=".\docs\pictures\03\3_html_4.png" width=500 border="1" hspace="10"><br><br>
         </div>
       </div>
     </section>
   </div>
-  <script src="./docs/JavaScript/tab.js"></script> 
+  <script src="./docs/JavaScript/tab.js"></script>
 </body>
 </html>
