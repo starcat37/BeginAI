@@ -1,11 +1,3 @@
-<!--
-<div>: 대주제 바로 밑 대문단 구분
-<p>: 소문단 구분
-기본적인 폰트나 레이아웃은 하영이 꺼랑 같게 해줘!!
-h1~h4까지 사용했어
-탭은 안 넣어도 되는데 보기 번거로우면 넣어도 돼
--->
-
 <!DOCTYPE html>
 <html>
 
@@ -56,7 +48,7 @@ h1~h4까지 사용했어
             그 중에서 인공신경망에 초점을 맞춰 살펴 볼 예정임.
           </p>
         </div>
-  
+
         <div class = "subsections">
           <h2> 04-2. 인공신경망 방식으로 만든 인공지능</h2>
             <h3> ◦ 인공신경망(ANN, Artificial Neural Network)</h3>
@@ -66,7 +58,7 @@ h1~h4까지 사용했어
               즉 레이어(layer)라는 개념을 사용하여 연결함</li>
               <img src=".\docs\pictures\02\02-2.png" alt="" width=500 border="1" hspace="10">
             </ul>
-            
+
             <ul>
               <li>입력층 : 데이터를 입력받는 층</li>
               <li>은닉층 : 입력층에서 들어온 데이터가 여러 신호로 바뀌어서 출력층까지 전달됨.
@@ -90,12 +82,12 @@ h1~h4까지 사용했어
               <li>입력한 데이터가 여러 레이어를 지나가면서 특정한 신호로 전달됨.</li>
               <li>어느 쪽으로 신호가 많이 가는지를 살펴본 후, 신호가 많이 간 쪽으로 결과를 내는 것.</li><br>
               <img src=".\docs\pictures\02\02-3.jpeg" alt="" width=500 border="1" hspace="10"><br>
-              <li>이 때 모델이 신호를 정확한 출력값으로 보내지 않는다면,<br> 
+              <li>이 때 모델이 신호를 정확한 출력값으로 보내지 않는다면,<br>
                 정확한 출력값으로 보낼 수 있도록 신호 세기를 조정하는 과정이 바로 인공 신경망의 학습과정임.</li><br>
             </ul>
         </div>
       </section>
-      
+
       <section  id="tab-2" class="tab-content">
         <h1>05. 인공 신경망의 신호 전달 원리</h1>
         <div class="subsections">
@@ -121,7 +113,7 @@ h1~h4까지 사용했어
             <img src=".\docs\pictures\02\02-6.png" alt="" width=500 border="1" hspace="10"><br>
             <li>활성화 함수: 여러 뉴런에서 들어온 신호 세기를 특정한 값을 바꾸기 위해 사용, 신호 세기를 조절하는데, 특 레이어와 레이어 사이에 있어서 여러 뉴런에서 특정한 뉴런으로 들어가는 신호를 종합하여 하나의 값으로 바꿔줌</li>
             <img src=".\docs\pictures\02\02-7.png" alt="" width=500 border="1" hspace="10"><br>
-            
+
             <div>
               <h3> ◦ 활성화 함수의 종류</h3>
               <ul>
@@ -136,7 +128,7 @@ h1~h4까지 사용했어
                 </li>
                 <li class="hidden-list">1-2. 시그모이드 곡선: 로지스틱 곡선의 특수한 사례<br>
                   <img src=".\docs\pictures\02\02-9.png" alt="" width=500 border="1" hspace="10"><br>
-                  <ul>  
+                  <ul>
                     <li>로지스틱 함수와 비슷한 S자 모양</li>
                     <li>양수를 입력값으로 넣으면 출력값이 1에 가까워짐 / 음수를 입력값으로 넣으면 출력값이 0에 가까워짐</li>
                     <li>여러 뉴런에서 들어온 신호 세기가 0보다 클수록 1에 가까운 숫자, 0보다 작을 수록 0에 가까운 숫자로 바꾸어 줌</li>
@@ -161,11 +153,12 @@ h1~h4까지 사용했어
                     <li>입력값이 아무리 커도 1보다 큰 출력이 나오지 않는 시그모이드, 하이퍼볼릭탄젠트 함수의 단점을 해결</li>
                     <li>그러나 렐루 함수 또한 입력값이 음수일 경우 출력값이 0으로 같다는 단점이 있어 아래와 같은 Leaky 렐루(Leaky ReLU) 함수로 보완함<br>
                   </ul>
-                  <img src=".\docs\pictures\02\02-12.png" alt="" width=500 border="1" hspace="10"></li> 
-                  <ul> 
+                  <li><img src=".\docs\pictures\02\02-12.png" alt="" width=500 border="1" hspace="10"></li>
+                  <ul>
                     <li>렐루 함수와 달리, 음수일 경우 양수일 경우의 기울기와 다른 완만한 기울기에 따라 미세하게나마 차이나는 음수 값을 전달함</li>
                   </ul>
-                </li>    
+                </li>
+                
               </ul>
             </div>
             <div>
@@ -182,8 +175,8 @@ h1~h4까지 사용했어
           </ul>
         </div>
       </section>
-      
-      <section  id="tab-3" class="tab-content"> 
+
+      <section  id="tab-3" class="tab-content">
         <h1>06. 인공 신경망의 학습 원리</h1>
         <div class="subsections">
           <h2>06-1. 인공지능의 학습이란? </h2>
@@ -205,7 +198,7 @@ h1~h4까지 사용했어
                   </p>
                 </li>
               </ul>
-            
+
               <h4>2) 나이대를 예측하는 인공지능 모델의 오차 구하기</h4>
               <ul>
                   <li> 다중 분류 문제 : 여럿 중 하나로 구분하는 인공지능<br></li>
@@ -221,8 +214,8 @@ h1~h4까지 사용했어
                     </p>
                   </li>
                 </ul>
- 
-  
+
+
               <h4>3) 나이를 예측하는 인공지능 모델의 오차 구하기</h4>
               <ul>
                 <li>- 회귀 문제 : 특정한 값을 예측하는 인공지능<br></li>
@@ -256,7 +249,7 @@ h1~h4까지 사용했어
             </ul>
           </ul>
         </div>
-      
+
       </section>
     </div>
     <script src="./docs/JavaScript/tab.js"></script> <!--Java Script 추가-->
