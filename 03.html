@@ -2,66 +2,130 @@
 <html>
 <head>
   <meta charset='utf-8'>
+  <link rel="stylesheet" href="./docs/CSS/beginAI.css">
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
 <body>
-  <h1> 적용 </h1>
-  <h2> 07 텐서플로 플레이그라운드로 딥러닝 체험하기</h2><br>
-  <h3>1. 텐서플로 플레이그라운드 시작하기</h3>
-  주황색(음수, -1)과 파란색(양수, +1) 데이터를 구별할 수 있도록 학습시키는 분류 문제를 알아보자<br><br>
-  <img src="3_html_1.png" width=500 border="1" hspace="10"><br><br>
-  <div> - 에포크 (Epoch) : 전체 데이터를 사용하여 인공 신경망이 학습한 횟수 <br>
-  - 검증 데이터와 훈련 데이터의 비율 (Ratio of training to test data) : 훈련 데이터와 검증 데이터를 나누는 비율<br>
-  - 노이즈 (Noise) : Noise가 높아질수록 데이터가 섞여 있는 정도가 심해짐<br>
-  - 배치 사이즈 (Batch Size) : 신경망을 학습시킬 때 한 번에 학습하는 데이터의 양<br>
-  데이터의 입력 형태 중 각각의 요소 값을 수정한 후 재생성 (regenerate) 버튼을 클릭하여 실행함 </div>
+  <header>
+    <div id="logo">
+      <span style="font-size:45px;">Begin AI</span><br>
+      <span style="font-size:20px;">미래의 언어학자 프로젝트</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" >Home</a></li>
+        <li><a  href="01.html">Intro</a></li>
+        <li><a href="02.html">Basic</a></li>
+        <li><a class="current-menu" href="03.html">Futher</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <h3>2. 출력 부분 살펴보기</h3>
-  파란색 점과 주황색 점이 있는 곳이 2개의 영역으로 잘 구분되며, 오차 또한 0으로 가까워짐<br><br>
-  <div> - 훈련 데이터 (training data) : 신경망을 훈련하는 데에 쓰이는 데이터 <br>
-  - 검증 데이터 (test data) : 신경망이 제대로 학습되었는지 확인하는 데에 쓰이는 데이터<br>
-  - Test loss : 검증 데이터를 신경망에 넣었을 때의 오차값 <br>
-  학습이 진행되면서 오차값이 줄어드는 것을 확인할 수 있음 </div>
+  <div id="container">
+    <ul class="tabs">
+      <li class="tab-link current" data-tab="tab-1">07 텐서플로 플레이그라운드</li>
+      <li class="tab-link" data-tab="tab-2">08 다양한 딥러닝 기술</li>
+    </ul>
 
-  <h3>3. 신경망의 구조 설계하기</h3>
-  신경망의 층과 뉴런의 개수를 적절히 조절하여 좋은 심층 신경망 모델을 만들 수 있음<br><br>
-  <div>- 신경망 층의 개수 조절하기 : Hidden layers의 더하기, 빼기 버튼을 누름 <br>
-  - 뉴런의 수 조정하기 : 각 층에서 더하기, 빼기 버튼을 누름 <br><br>
-    <img src="3_html_2.png" width=500 border="1" hspace="10"><br><br> </div>
-
-  <h3>4. 텐서플로 플레이그라운드의 상단화면 용어 정리하기</h3>
-  <div> - 학습률 (Learning rate) : 오차값을 최소화하기 위해 뉴런을 연결하는 가중치 값을 얼마나 수정할지 결정하는데 사용됨 <br>
-  - 활성화 함수 (Activation) : ReLU, tanh, Sigmoid, Linear 등의 함수를 사용할 수 있음 <br>
-  - 정규화 (Regularization) : 이전에 보지 못한 데이터에는 예측이 좋지 않은 상태인 과적합을 줄이는 데 사용됨 <br>
-  - 정규화 값 (Regularization rate) : 정규화할 때 어느 정도로 값을 수정할지 정해줄 때 사용하는 값임 <br>
-  - 분류 문제 (Classification) : 데이터를 분류하도록 학습시키는 것 <br>
-  - 회기 문제 (Regression) : 연속된 데이터의 값을 예측하도록 학습시키는 것 <br><br> </div>
-
-    <h2>08 다양한 딥러닝 기술 살펴보기 </h2>
-    <h3>1. 인공신경망 (ANN)</h3>
-    인공 신경망의 층을 여러 개로 깊게 만든 것이 심층 신경망이며, 이를 학습시키는 과정이 딥러닝임<br>
-    <div> 예1) 숫자 인식 인공지능 : 픽셀을 입력값으로 인공 신경망에 넣는 방식으로 학습시킴 <br><br> </div>
-
-    <h3>2. 합성곱신경망 (CNN)</h3>
-    시각 세포의 작동 원리를 본떠 실제 이미지 인식 인공지능을 딥러닝 기법으로 만듦<br>
-    <div> - 합성곱 연산 : 추출한 부분 데이터를 필터와 곱할 때 합성곱 연산이 사용됨<br>
-    예1) 숫자 인식 인공지능 : 이미지를 특정한 영역별로 추출하여 학습시킴 <br>
-    예 2) 필기체 인식, 차량 번호판 인식, 의료용 인공지능 개발, 물체 인식 등에 사용됨 <br> </div>
-
-      <h3>3. 순환신경망 (RNN)</h3>
-      딥러닝의 알고리즘 중 연속된 값을 예측할 수 있음 (재귀 신경망)<br>
-      <div> - 재귀 : 가중치의 변화가 한 방향으로 이동하는 것이 아니라, 다시 자기 자신에게 돌아오는 형태를 지님 <br>
-      예1) 언어 번역 : 문맥을 학습할 수 있도록 순환 신경망을 사용함 <br>
-      예 2) 시간의 흐름 또는 연속된 데이터를 가진 모델을 만들 때 사용됨 <br>
-      예 3) 스케치 RNN : 사람들이 그린 순서대로 그림들을 학습하여, 그림을 그리는 과정을 예측할 수 있도록 함 <br><br>
-        <img src="3_html_3.png" width=500 border="1" hspace="10"><br><br>
+    <section id="tab-1" class="tab-content current">
+      <h1> 07 텐서플로 플레이그라운드로 딥러닝 체험하기</h1>
+      <hr>
+      <div class="subsections">
+        <h2>07-1. 텐서플로 플레이그라운드 시작하기</h2>
+        주황색(음수, -1)과 파란색(양수, +1) 데이터를 구별할 수 있도록 학습시키는 분류 문제를 알아보자<br>
+        <img src=".\docs\pictures\03\3_html_1.png" width=500 border="1" hspace="10">
+        <ul> 
+        <li>에포크 (Epoch) : 전체 데이터를 사용하여 인공 신경망이 학습한 횟수 </li>
+        <li>검증 데이터와 훈련 데이터의 비율 (Ratio of training to test data) : 훈련 데이터와 검증 데이터를 나누는 비율</li>
+        <li>노이즈 (Noise) : Noise가 높아질수록 데이터가 섞여 있는 정도가 심해짐</li>
+        <li>배치 사이즈 (Batch Size) : 신경망을 학습시킬 때 한 번에 학습하는 데이터의 양<br>
+        데이터의 입력 형태 중 각각의 요소 값을 수정한 후 재생성 (regenerate) 버튼을 클릭하여 실행함</li> 
+        </ul>
       </div>
+      
+      <div  class="subsections">
+        <h2>07-2. 출력 부분 살펴보기</h2>
+        파란색 점과 주황색 점이 있는 곳이 2개의 영역으로 잘 구분되며, 오차 또한 0으로 가까워짐<br>
+        <ul>
+        <li>훈련 데이터 (training data) : 신경망을 훈련하는 데에 쓰이는 데이터</li>
+        <li>검증 데이터 (test data) : 신경망이 제대로 학습되었는지 확인하는 데에 쓰이는 데이터</li>
+        <li>Test loss : 검증 데이터를 신경망에 넣었을 때의 오차값 <br>
+        학습이 진행되면서 오차값이 줄어드는 것을 확인할 수 있음 </li>
+        </ul>
+      </div>
+      <div class="subsections">
+          <h2>07-3. 신경망의 구조 설계하기</h2>
+          신경망의 층과 뉴런의 개수를 적절히 조절하여 좋은 심층 신경망 모델을 만들 수 있음
+          <ul>
+            <li>신경망 층의 개수 조절하기 : Hidden layers의 더하기, 빼기 버튼을 누름 </li>
+            <li>뉴런의 수 조정하기 : 각 층에서 더하기, 빼기 버튼을 누름 </li>
+            <img src=".\docs\pictures\03\3_html_2.png" width=500 border="1" hspace="10"><br><br> 
+          </ul>
+      </div>  
+      
+      <div class="subsections">
+        <h2>07-4. 텐서플로 플레이그라운드의 상단화면 용어 정리하기</h2>
+        <ul>
+          <li>학습률 (Learning rate) : 오차값을 최소화하기 위해 뉴런을 연결하는 가중치 값을 얼마나 수정할지 결정하는데 사용됨 </li>
+          <li>활성화 함수 (Activation) : ReLU, tanh, Sigmoid, Linear 등의 함수를 사용할 수 있음 </li>
+          <li>정규화 (Regularization) : 이전에 보지 못한 데이터에는 예측이 좋지 않은 상태인 과적합을 줄이는 데 사용됨 </li>
+          <li>정규화 값 (Regularization rate) : 정규화할 때 어느 정도로 값을 수정할지 정해줄 때 사용하는 값임 </li>
+          <li>분류 문제 (Classification) : 데이터를 분류하도록 학습시키는 것 </li>
+          <li>회기 문제 (Regression) : 연속된 데이터의 값을 예측하도록 학습시키는 것 <br> </li>
+        </ul>
 
-      <h3>4. 생성신경망 </h3>
-       판별과 예측을 목적으로 하는 신경망과 달리, 무엇인가를 만들기 위한 신경망<br>
-       <div> - 생성 인공지능 : 조건에 맞는 그림을 그려줌 <br>
-       예1) 딥페이크 : 생성 모델링을 통해 기존에 있던 영상이나 사진에 새로운 사람의 얼굴이나 특정 부위를 합성함<br>
-       예2) 딥아트 : 특정 화가의 화풍을 학습한 인공지능으로 화풍과 비슷하게 사진을 변경함 <br><br>
-       <img src="3_html_4.png" width=500 border="1" hspace="10"><br><br> </div>
+      </div>
+      
+    </section>
 
+    <section id="tab-2" class="tab-content">
+      <h1>08 다양한 딥러닝 기술 살펴보기 </h1>
+      <div class="subsections">
+        <h2>08-1. 인공신경망 (ANN)</h2>
+        인공 신경망의 층을 여러 개로 깊게 만든 것이 심층 신경망이며, 이를 학습시키는 과정이 딥러닝임<br>
+        <div > 예1) 숫자 인식 인공지능 : 픽셀을 입력값으로 인공 신경망에 넣는 방식으로 학습시킴 </div>
+      </div>
+      <div class="subsections">
+        <h2>08-2. 합성곱신경망 (CNN)</h2>
+        시각 세포의 작동 원리를 본떠 실제 이미지 인식 인공지능을 딥러닝 기법으로 만듦
+        <ul style="margin:10px;"> 
+          
+          <li>합성곱 연산 : 추출한 부분 데이터를 필터와 곱할 때 합성곱 연산이 사용됨<br></li> 
+        
+        </ul>
+        <div >
+          예1) 숫자 인식 인공지능 : 이미지를 특정한 영역별로 추출하여 학습시킴 <br>
+          예 2) 필기체 인식, 차량 번호판 인식, 의료용 인공지능 개발, 물체 인식 등에 사용됨 <br>
+        </div>
+      </div>
+      <div class="subsections">
+        <h2>08-3. 순환신경망 (RNN)</h2>
+        딥러닝의 알고리즘 중 연속된 값을 예측할 수 있음 (재귀 신경망)<br>
+        <ul sytle="margin:10px;"> 
+          <li>재귀 : 가중치의 변화가 한 방향으로 이동하는 것이 아니라, 다시 자기 자신에게 돌아오는 형태를 지님</li>
+        </ul>
+        <div>
+          예1) 언어 번역 : 문맥을 학습할 수 있도록 순환 신경망을 사용함 <br>
+          예 2) 시간의 흐름 또는 연속된 데이터를 가진 모델을 만들 때 사용됨 <br>
+          예 3) 스케치 RNN : 사람들이 그린 순서대로 그림들을 학습하여, 그림을 그리는 과정을 예측할 수 있도록 함 <br>
+          <img src=".\docs\pictures\03\3_html_3.png" width=500 border="1" hspace="10"><br><br>
+        </div>
+      </div>
+        
+      <div class="subsections">
+        <h2>08-4. 생성신경망 </h2>
+         판별과 예측을 목적으로 하는 신경망과 달리, 무엇인가를 만들기 위한 신경망<br>
+        <ul style="margin:10px;"> 
+          <li>생성 인공지능 : 조건에 맞는 그림을 그려줌 <br></li>
+        </ul>
+        <div>
+         예1) 딥페이크 : 생성 모델링을 통해 기존에 있던 영상이나 사진에 새로운 사람의 얼굴이나 특정 부위를 합성함<br>
+         예2) 딥아트 : 특정 화가의 화풍을 학습한 인공지능으로 화풍과 비슷하게 사진을 변경함 <br><br>
+         <img src=".\docs\pictures\03\3_html_4.png" width=500 border="1" hspace="10"><br><br> 
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="./docs/JavaScript/tab.js"></script> 
 </body>
 </html>

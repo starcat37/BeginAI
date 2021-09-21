@@ -1,102 +1,226 @@
 <!doctype html>
 <html>
 <head>
-  <title>01.html</title>
+  <title>Intro</title>
   <meta charset="utf-8">
-  <style>
-  </style>
+  <!-----------------추가할 부분 1 :CSS------------------------------>
+  <link rel="stylesheet" href="./docs/CSS/beginAI.css">
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!------------------------------------------------------------->
 </head>
+
 <body>
-  <h1>01 인공지능 개념 이해하기</h1>
-  <h2>1. 인공지능: 인공적으로 만든 지능</h2>
-  - 음성인식, 무인 자동차, 물건 및 감정 인식 인공지능<br>
-  - 우리가 사용하는 대부분의 인공지능 - 머신러닝 이용<br><br>
-  <h2>2. 머신러닝</h2>
-  - 데이터를 사용하여 인공지능을 만듦<br>
-  - 오늘날 인공지능을 만들 때 가장 많이 사용하는 방법<br>
-  - 사람이 직접 프로그램을 만들어서 기계에 넣어주는 전통적인 프로그래밍 방식과 달리, 기계가 스스로 문제를 해결하는 방법을 학습하는 것<br>
-  - 수많은 데이터, 즉 빅데이터 속에서 스스로 규칙을 찾고, 그 규칙을 학습하는 것
-    <div>→ 머신러닝: 데이터를 사용해서 기계가 스스로 학습하는 방식<br><br></div>
-  <img src=".\picture01\01-1.png" width=500 border="1" hspace="10"><br>
-  전통적인 프로그래밍 vs. 머신러닝<br><br>
-  <h2>3. 딥러닝</h2>
-  - 머신러닝의 기법 중 하나<br>
-  - 딥러닝은 머신러닝이지만, 머신러닝은 딥러닝이라고 단정지을 수 없음<br><br>
+  <!----------------------추가할 부분 2 : 메뉴 ------------------->
+  <header>
+    <div id="logo">
+      <span style="font-size:45px;">Begin AI</span><br>
+      <span style="font-size:20px;">미래의 언어학자 프로젝트</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" >Home</a></li>
+        <li><a class="current-menu" href="01.html">Intro</a></li>
+        <li><a href="02.html">Basic</a></li>
+        <li><a href="03.html">Futher</a></li>
+      </ul>
+    </nav>
+    
+  </header>
+  <!----------------------------------------------------------------->
+  
+  <div id="container">
+    <!--------------추가할 부분 3 :탭 메뉴 상단----------------------------------->
+    <ul class="tabs">
+      <li class="tab-link current" data-tab="tab-1">01 인공지능 개념 이해</li>
+      <li class="tab-link" data-tab="tab-2">02 머신러닝 학습방법</li>
+      <li class="tab-link" data-tab="tab-3">03 인공지능 체험</li>
+    </ul>
+    <!----------------------------------------------------------------------------->
 
-  <h1>02 머신러닝의 학습 방법 살펴보기</h2>
-  <h2>1. 지도학습(Supervised learning)</h2>
-  - 정답(레이블, label)이 있는 데이터를 이용하여 학습하는 것<br>
-  - 데이터 vs 레이블(Label)
-    <div>→ 데이터 : 사과 사진 50개</div>
-    <div>→ 레이블 : '사과', '배'라는 이름 = 정답</div><br>
-  <h3>사례: 어디에 사용되는가?</h3>
-  <h4>1) 분류(classification)</h4>
-  - 이진분류(binary classification)
-    <div>- 정답(레이블)이 2개인 경우</div>
-    <div>- 예1) 스팸메일인지, 일반 메일인지 구별</div>
-    <div>- 예2) 환자의 폐 CT사진에서 암이 보이는지, 아닌지 구별</div><br>
-  - 다중분류(multiclass classification)
-    <div>- 정답(레이블)이 3개 이상인 경우</div>
-    <div>- 예1) 새의 종류 구별</div>
-    <div>- 예2) 붓꽃(Iris)의 종류 구별</div>
-    <div>- 예3) 지폐의 종류 구별</div>
-    <div>- 예4) 사람의 나이대 구분(10대/20대/30대/...)</div><br>
-  <h4>2) 회귀(regression)</h4>
-  -회귀란?: 연속적인 값을 예측하는 것
-    <div>- 예1) 집값 예측</div>
-    <div>- 예2) 학생의 성적 에측</div>
-    <div>- 예3) 주식 예측</div>
-    <div>- 예4) 사람의 나이 판단(23세/24세/..45세</div><br><br>
-  <h2>2. 비지도학습(Unsupervised learning)</h2>
-  - 정답이 없는 데이터를 사용하여 인공지능이 스스로 특징을 학습하는 방법<br>
-  - 지도학습이 불가능한 상황(모범 답안이 없는 경우) 매우 유용하게 사용됨<br>
-  - 현실 세계에는 정답이 있는 데이터보다 정답이 없는 데이터가 많음.<br>
-  <h3>사례: 어디에 사용되는가?</h3>
-  <h4>1) 군집화(Clustering)</h4>
-  - 데이터를 여러 그룹으로 묶는 것<br>
-  - 예1) 콘텐츠 혹은 상품 추천 알고리즘
-    <div>1. 사람들의 구매 내역을 바탕으로 몇 개의 그룹(예 : A, B, C)으로 나눔</div>
-    <div>2. 새로운 이용자의 구매 데이터를 통해 어떤 그룹(예: A)에 속하는지 확인</div>
-    <div>3. 그 그룹(예: A)의 다른 사람이 이전에 어떤 물건을 구매하였는지 확인하고, 이용자에게 이를 추천함</div><br>
-  <h4>2) 차원 축소(dimensionality reduction)</h4>
-  - "차원" : 데이터의 특징(feature)을 의미함<br>
-  - 즉, 데이터의 여러 특징들 중에서 가장 대표적인 특징만 뽑아내는 것.<br><br>
-  <h2>3. 강화학습</h2>
-  - 시행착오를 거쳐 학습하는 방법<br>
-  <h3><a href="https://youtu.be/V1eYniJ0Rnk">1. Atari 벽돌깨기 게임을 하는 Google DeepMind의 Deep Q-learning</a></h3>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/MLXlXCwA0T4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
-  ▶ 동영상 내용<br>
-  Google DeepMind의 Deep Q-learning<br>
-  이 알고리즘은 Atari 벽돌깨기 게임을 플레이합니다.<br>
-  알아야 할 가장 중요한 점은, 감각 입력(sensory input, 화면으로 보이는 부분)만 주어졌으며 화면에 표시된 점수를 최대화하도록 지시받았다는 점입니다.<br>
-  도메인 지식은 포함되지 않았습니다.<br>
-  즉, 이 알고리즘은 공의 개념과, 조작이 정확히 뭘 하고 있는지 모른다는 의미 입니다.<br><br>
-  0:21 10분동안 훈련한 결과
-  <div>→ 알고리즘이 공을 받아 치려고 하나, 아직 어설픈 조작을 보입니다.</div><br>
-  0:45 120분동안 훈련한 결과
-  <div>→ 전문가처럼 게임을 합니다.</div><br>
-  1:12 240분 동안 훈련한 결과</div>
-  <div>→ 마법이 일어나는 순간 : 게임을 깨기 위해 벽을 뚫어서 터널을 만드는 것이 가장 효과적인 기술이 라는 것을 깨달았습니다.<br>
-  <h3><a href="https://www.youtube.com/watch?v=gn4nRCC9TwQ">2. Google's DeepMind AI Just Taught Itself To Walk</a></h3>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/gn4nRCC9TwQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
-  <h3><a href="https://www.youtube.com/watch?v=VMp6pq6_QjI">3. AI Learns to Park - Deep Reinforcement Learning</a></h3>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/VMp6pq6_QjI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
+    <section id="tab-1" class="tab-content current"> <!--id 및 class 추가-->
+      <h1>01 인공지능 개념 이해하기</h1>
+      <hr>
+      <div class="subsections">
+        <h2>01-1. 인공지능: 인공적으로 만든 지능</h2>
+        <ul>
+          <li>음성인식, 무인 자동차, 물건 및 감정 인식 인공지능</li>
+          <li>우리가 사용하는 대부분의 인공지능 - 머신러닝 이용</li>
+        </ul>
+      </div>
 
-  <h1>03 인공지능 체험하기</h1>
-  <h2>1. 티처블 머신(Teachable Machine)</h2>
-  - 링크: <a href="https://teachablemachine.withgoogle.com/">(https://teachablemachine.withgoogle.com/)</a><br>
-  - 지도 학습 방법 사용<br>
-  - 이미지 인식 기능을 통한 수신호 구별<br><br>
-    <img src=".\picture01\01-2.png" width=500 border="1" hspace="10"><br><br>
-  <h2>2. 퀵 드로우</h2>
-  - 링크: <a href="https://quickdraw.withgoogle.com/">(https://quickdraw.withgoogle.com/)</a><br>
-  - 전세계의 사람들이 그린 낙서를 대량으로 학습하여 낙서를 인식<br>
-  - 지도 학습 방법 사용 – 정답 레이블 有<br><br>
-    <img src=".\picture01\01-3.png" width=500 border="1" hspace="10"><br><br>
-  <h2>3. 오토드로우(AUtodraw)</h2>
-  - 링크: <a href="https://www.autodraw.com/">(https://www.autodraw.com/)</a><br>
-  - 사용자가 그린 그림을 인공지능을 통해 업그레이드<br>
-  - 퀵 드로우 데이터셋(Quick Draw Dataset) 사용<br><br>
-    <img src=".\picture01\01-4.png" width=500 border="1" hspace="10"><br><br>
+      <div  class="subsections">
+        <h2>01-2. 머신러닝</h2>
+          <ul>
+            <li>데이터를 사용하여 인공지능을 만듦</li>
+            <li>오늘날 인공지능을 만들 때 가장 많이 사용하는 방법</li>
+            <li>사람이 직접 프로그램을 만들어서 기계에 넣어주는 전통적인 프로그래밍 방식과 달리, 기계가 스스로 문제를 해결하는 방법을 학습하는 것</li>
+            <li>수많은 데이터, 즉 빅데이터 속에서 스스로 규칙을 찾고, 그 규칙을 학습하는 것</li>
+            <ul>
+              <div>→ 머신러닝: 데이터를 사용해서 기계가 스스로 학습하는 방식<br><br></div>
+              <div>
+                <img src=".\docs\pictures\01\01-1.png" width=500 border="1" hspace="10"><br>
+                전통적인 프로그래밍 vs. 머신러닝<br><br>
+              </div>
+            </ul>
+          </ul>
+      </div>
+
+      <div class="subsections">
+      <h2>01-3. 딥러닝</h2>
+      <ul>
+        <li>머신러닝의 기법 중 하나</li>
+        <li>딥러닝은 머신러닝이지만, 머신러닝은 딥러닝이라고 단정지을 수 없음</li>
+      </ul>
+    </div>
+    </section>
+
+    <section  id="tab-2" class="tab-content">  <!--id 및 class 추가-->
+      <h1>02 머신러닝의 학습 방법 살펴보기</h1>
+      <hr>
+      <div class="subsections">
+        <h2>02-1. 지도학습(Supervised learning)</h2>
+        <ul>
+          <li>정답(레이블, label)이 있는 데이터를 이용하여 학습하는 것</li>
+          <li>데이터 vs 레이블(Label)</li>
+          <ul>
+            <li>→ 데이터 : 사과 사진 50개</li>
+            <li>→ 레이블 : '사과', '배'라는 이름 = 정답</li>
+          </ul>
+        </ul>
+        <div class="need-indent" >
+          <h3>사례: 어디에 사용되는가?</h3>
+          <ul>
+          <h4>1) 분류(classification)</h4>
+          <ul>
+          <li> 이진분류(binary classification)</li>
+          <ul>
+            <li> 정답(레이블)이 2개인 경우</li>
+            <li> 예1) 스팸메일인지, 일반 메일인지 구별</li>
+            <li> 예2) 환자의 폐 CT사진에서 암이 보이는지, 아닌지 구별</li><br>
+          </ul>
+          </ul>
+          <ul>
+          <li> 다중분류(multiclass classification)</li>
+          <ul>
+            <li> 정답(레이블)이 3개 이상인 경우</li>
+            <li> 예1) 새의 종류 구별</li>
+            <li> 예2) 붓꽃(Iris)의 종류 구별</li>
+            <li> 예3) 지폐의 종류 구별</li>
+            <li> 예4) 사람의 나이대 구분(10대/20대/30대/...)</li><br>
+          </ul>
+          </ul>
+          <h4>2) 회귀(regression)</h4>
+          <ul>
+          <li>회귀란?: 연속적인 값을 예측하는 것</li>
+            <ul>
+              <li> 예1) 집값 예측</li>
+              <li> 예2) 학생의 성적 에측</li>
+              <li> 예3) 주식 예측</li>
+              <li> 예4) 사람의 나이 판단(23세/24세/..45세</li>
+            </ul>
+          </ul>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subsections">
+        <h2>02-2. 비지도학습(Unsupervised learning)</h2>
+          <ul>
+            <li> 정답이 없는 데이터를 사용하여 인공지능이 스스로 특징을 학습하는 방법</li>
+            <li> 지도학습이 불가능한 상황(모범 답안이 없는 경우) 매우 유용하게 사용됨</li>
+            <li> 현실 세계에는 정답이 있는 데이터보다 정답이 없는 데이터가 많음.</li>
+          </ul>
+          <div class="need-indent" >
+            <h3>사례: 어디에 사용되는가?</h3>
+            <h4>1) 군집화(Clustering)</h4>
+            <ul>
+              <li> 데이터를 여러 그룹으로 묶는 것</li>
+              <li> 예1) 콘텐츠 혹은 상품 추천 알고리즘</li>
+              <ol>
+                <li>사람들의 구매 내역을 바탕으로 몇 개의 그룹(예 : A, B, C)으로 나눔</li>
+                <li>새로운 이용자의 구매 데이터를 통해 어떤 그룹(예: A)에 속하는지 확인</li>
+                <li>그 그룹(예: A)의 다른 사람이 이전에 어떤 물건을 구매하였는지 확인하고, 이용자에게 이를 추천함</li>
+              </ol>
+            </ul>
+            <h4>2) 차원 축소(dimensionality reduction)</h4>
+            <ul>
+                <li> "차원" : 데이터의 특징(feature)을 의미함</li>
+                <li> 즉, 데이터의 여러 특징들 중에서 가장 대표적인 특징만 뽑아내는 것.</li>
+            </ul>
+          </div>
+         
+      </div>
+
+      <div class="subsections">
+        <h2>02-3. 강화학습</h2>
+          <ul>
+             시행착오를 거쳐 학습하는 방법<br>
+            <h3><a href="https://youtu.be/V1eYniJ0Rnk">1. Atari 벽돌깨기 게임을 하는 Google DeepMind의 Deep Q-learning</a></h3>
+            <div>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/V1eYniJ0Rnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <div>
+                ▶ 동영상 내용
+                <p>
+                  Google DeepMind의 Deep Q-learning<br>
+                  이 알고리즘은 Atari 벽돌깨기 게임을 플레이합니다.<br>
+                  알아야 할 가장 중요한 점은, 감각 입력(sensory input, 화면으로 보이는 부분)만 주어졌으며 화면에 표시된 점수를 최대화하도록 지시받았다는 점입니다.<br>
+                  도메인 지식은 포함되지 않았습니다.<br>
+                  즉, 이 알고리즘은 공의 개념과, 조작이 정확히 뭘 하고 있는지 모른다는 의미 입니다.<br><br>
+                </p>
+                <p>
+                  <span class="time">0:21</span> <b>10분</b>동안 훈련한 결과
+                  <div>→ 알고리즘이 공을 받아 치려고 하나, 아직 어설픈 조작을 보입니다.</div><br>
+                  <span class="time">0:45</span> <b>120분</b>동안 훈련한 결과
+                  <div>→ 전문가처럼 게임을 합니다.</div><br>
+                  <span class="time">1:12</span> <b>240분</b> 동안 훈련한 결과</div>
+                  <div>→ 마법이 일어나는 순간 : 게임을 깨기 위해 벽을 뚫어서 터널을 만드는 것이 가장 효과적인 기술이 라는 것을 깨달았습니다.<br>
+                </p>
+            </div>
+            </div>
+              <h3><a href="https://www.youtube.com/watch?v=gn4nRCC9TwQ">2. Google's DeepMind AI Just Taught Itself To Walk</a></h3>
+              <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/gn4nRCC9TwQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+              </div>
+              <h3><a href="https://www.youtube.com/watch?v=VMp6pq6_QjI">3. AI Learns to Park - Deep Reinforcement Learning</a></h3>
+              <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/VMp6pq6_QjI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br><br>
+              </div>
+            </ul>
+      </div>
+    </section>
+
+    <section  id="tab-3" class="tab-content">  <!--id 및 class 추가-->
+      <h1>03 인공지능 체험하기</h1>
+      <hr>
+      <div  class="subsections">
+        <h2 >03-1. 티처블 머신(Teachable Machine)</h2>
+        <ul>
+          <li> 링크: <a href="https://teachablemachine.withgoogle.com/">(https://teachablemachine.withgoogle.com/)</a></li>
+          <li> 지도 학습 방법 사용</li>
+          <li> 이미지 인식 기능을 통한 수신호 구별</li>
+          <img src=".\docs\pictures\01\01-2.png" width=500 border="1" hspace="10"><br><br>
+        </ul>
+      </div>
+      <div  class="subsections">
+        <h2>03-2. 퀵 드로우</h2>
+        <ul>
+          <li> 링크: <a href="https://quickdraw.withgoogle.com/">(https://quickdraw.withgoogle.com/)</a></li>
+          <li> 전세계의 사람들이 그린 낙서를 대량으로 학습하여 낙서를 인식</li>
+          <li> 지도 학습 방법 사용 – 정답 레이블 有</li>
+          <img src=".\docs\pictures\01\01-3.png" width=500 border="1" hspace="10"><br><br>
+        </ul>
+      </div>
+      <div  class="subsections">
+        <h2>03-3. 오토드로우(AUtodraw)</h2>
+        <ul>
+          <li> 링크: <a href="https://www.autodraw.com/">(https://www.autodraw.com/)</a></li>
+          <li> 사용자가 그린 그림을 인공지능을 통해 업그레이드</li>
+          <li> 퀵 드로우 데이터셋(Quick Draw Dataset) 사용</li>
+          <img src=".\docs\pictures\01\01-4.png" width=500 border="1" hspace="10"><br><br>
+        </ul>
+      </div>
+    </section>
+  </div>
+  <script src="./docs/JavaScript/tab.js"></script> <!--Java Script 추가-->
 </body>
 </html>

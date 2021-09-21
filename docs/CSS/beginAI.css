@@ -1,0 +1,142 @@
+/*****HEADER******/
+#logo{
+    width:1300px;
+    margin: 20px auto;
+    font-weight:bold;
+    text-align: center;
+    line-height:40px;
+}
+nav{
+    margin : 0;
+    font-size: 12pt;
+    font-family: 'PT Sans', Arial, Sans-serif;
+    position: relative;
+}
+nav ul{
+    padding: 0;
+    margin: 0 auto;
+    width: auto;
+    width:1300px;
+    border-style:solid;
+    border-color:#27211E;
+
+    text-align: center;
+    border-radius : 10px;;
+}
+nav li{
+  line-height: 50px;
+  height: 50px;
+  display: inline-block;
+}
+nav a{
+  color: #27211E;
+ 
+  text-align: center;
+  padding: 14.5px 16px;
+  text-decoration: none;
+}
+nav a:hover{
+  color: #F9C007;
+  font-weight:normal;
+}
+.current-menu{
+    color:#2CB7A5;
+    text-decoration-line: underline; 
+} 
+
+/***CONTENTS***/
+#container{
+    width:1300px;
+    margin-left:auto;
+    margin-right:auto;
+    font-family: 'PT Sans', Arial, Sans-serif;
+    line-height: 30px;;
+}
+a{
+    color : black;
+}
+h1{
+    font-size : 30px;
+    display:inline-block;
+    padding:5px;
+    margin-bottom:2px;
+}
+h2{
+    margin : 0;
+    font-size:20px;
+}
+li{
+    padding:5px;
+}
+.subsections{
+    margin:50px;
+    margin-top:30px;
+}
+.need-indent{
+    padding-left:30px;
+}
+.time{
+    color:#2CB7A5;
+}
+img{
+    margin:10px;
+}
+.hidden-list{
+    list-style:none;
+    margin:20px;
+}
+
+/**TAB**/
+ul.tabs{
+    margin-bottom: 0px;
+    padding:0px;
+    list-style: none;
+}
+ul.tabs li{
+    display:inline-block;
+    padding:10px 15px;
+    cursor:pointer;
+    border-style:solid;
+    border-color:#2cb7a585;
+    border-bottom-color:white;
+    border-bottom:none;
+    font-weight: bold;
+    background:#2cb7a585;
+}
+
+ul.tabs li.current{
+    background:#F9C007;
+    color:black;
+    border-color:#F9C007;
+}
+
+.tab-content{
+    display:none;
+    padding-left:50px;
+    padding-right:50px;
+    padding-bottom:50px;
+    padding-top:20px;
+    border-style:solid;
+    border-color:#F9C007;
+}
+.tab-content.current{
+    display: inherit;
+}
+
+/**색 조합**/
+.tab-content{
+color : 
+#d7a988
+#285270
+
+
+#fff6c0
+#65969a
+
+#F9C007
+#27211E
+#2CB7A5
+}
+
+
+
