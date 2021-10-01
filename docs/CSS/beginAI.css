@@ -122,8 +122,7 @@ ul.tabs li.current{
 .tab-content.current{
     display: inherit;
 }
-
-/**색 조합**/
+색 조합
 .tab-content{
 color : 
 #d7a988
@@ -137,6 +136,6 @@ color :
 #27211E
 #2CB7A5
 }
-
+**/
 
 
